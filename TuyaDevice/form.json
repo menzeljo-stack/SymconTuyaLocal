@@ -1,0 +1,22 @@
+{
+  "elements": [
+    { "type": "ValidationTextBox", "name": "DeviceID", "caption": "Geräte-ID" },
+    { "type": "PasswordTextBox", "name": "LocalKey", "caption": "Local Key" },
+    { "type": "ValidationTextBox", "name": "Host", "caption": "IP-Adresse (leer = per MAC suchen)" },
+    { "type": "ValidationTextBox", "name": "MAC", "caption": "MAC-Adresse" },
+    { "type": "Select", "name": "Version", "caption": "Protokoll", "options": [
+      { "caption": "automatisch", "value": "auto" }, { "caption": "3.3", "value": "3.3" }, { "caption": "3.4", "value": "3.4" }, { "caption": "3.5", "value": "3.5" } ] },
+    { "type": "NumberSpinner", "name": "Interval", "caption": "Statusabfrage alle", "minimum": 5, "suffix": " s" },
+    { "type": "NumberSpinner", "name": "CTMin", "caption": "Farbtemperatur warm", "minimum": 1000, "maximum": 10000, "suffix": " K" },
+    { "type": "NumberSpinner", "name": "CTMax", "caption": "Farbtemperatur kalt", "minimum": 1000, "maximum": 10000, "suffix": " K" },
+    { "type": "CheckBox", "name": "OfflineAsOff", "caption": "Bei Nichterreichbarkeit als „aus“ anzeigen" }
+  ],
+  "actions": [
+    { "type": "Button", "caption": "Status abfragen", "onClick": "TUYA_Update($id);" }
+  ],
+  "status": [
+    { "code": 102, "icon": "active", "caption": "Verbunden" },
+    { "code": 200, "icon": "error", "caption": "Gerät nicht erreichbar" },
+    { "code": 201, "icon": "inactive", "caption": "Geräte-ID und Local Key (16 Zeichen) eintragen" }
+  ]
+}

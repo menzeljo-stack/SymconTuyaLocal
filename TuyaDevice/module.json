@@ -1,0 +1,14 @@
+{
+    "id": "{4419CC3C-AB82-4626-A4B2-0DF1A34B8A30}",
+    "name": "TuyaDevice",
+    "type": 3,
+    "vendor": "Tuya",
+    "aliases": [
+        "Tuya Gerät (lokal)"
+    ],
+    "url": "",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "TUYA"
+}

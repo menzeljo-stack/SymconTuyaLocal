@@ -1,0 +1,28 @@
+{
+  "elements": [
+    { "type": "Label", "caption": "Zugangsdaten aus iot.tuya.com → Cloud → Projekt → Overview (Authorization Key). Die Cloud wird nur zum Einlesen von Geräten und Keys benutzt, gesteuert wird lokal." },
+    { "type": "ValidationTextBox", "name": "AccessID", "caption": "Access ID / Client ID" },
+    { "type": "PasswordTextBox", "name": "AccessSecret", "caption": "Access Secret / Client Secret" },
+    { "type": "Select", "name": "Region", "caption": "Rechenzentrum", "options": [
+      { "caption": "Central Europe", "value": "eu" }, { "caption": "Western Europe", "value": "weu" },
+      { "caption": "Western America", "value": "us" }, { "caption": "China", "value": "cn" }, { "caption": "India", "value": "in" } ] },
+    { "type": "SelectCategory", "name": "ImportCategory", "caption": "Neue Geräte anlegen unter" }
+  ],
+  "actions": [
+    { "type": "Configurator", "name": "Devices", "caption": "Tuya-Geräte", "rowCount": 15, "add": false, "delete": true, "sort": { "column": "name", "direction": "ascending" },
+      "columns": [
+        { "caption": "Name", "name": "name", "width": "auto" },
+        { "caption": "Produkt", "name": "product", "width": "180px" },
+        { "caption": "Kategorie", "name": "category", "width": "90px" },
+        { "caption": "IP (lokal)", "name": "ip", "width": "130px" },
+        { "caption": "Online", "name": "online", "width": "70px" },
+        { "caption": "Geräte-ID", "name": "id", "width": "220px" }
+      ],
+      "values": [] },
+    { "type": "Button", "caption": "Local Keys aller Geräte aktualisieren", "onClick": "echo TUYACFG_UpdateKeys($id);" }
+  ],
+  "status": [
+    { "code": 102, "icon": "active", "caption": "Bereit" },
+    { "code": 104, "icon": "inactive", "caption": "Access ID und Secret eintragen" }
+  ]
+}

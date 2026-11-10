@@ -1,0 +1,14 @@
+{
+    "id": "{CF7B3E7F-467A-4FEC-B099-51F5F11F4E7F}",
+    "name": "TuyaConfigurator",
+    "type": 4,
+    "vendor": "Tuya",
+    "aliases": [
+        "Tuya Konfigurator"
+    ],
+    "url": "",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "TUYACFG"
+}
